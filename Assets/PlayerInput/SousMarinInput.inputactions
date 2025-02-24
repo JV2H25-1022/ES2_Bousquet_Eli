@@ -1,0 +1,130 @@
+{
+    "name": "SousMarinInput",
+    "maps": [
+        {
+            "name": "SousMarin",
+            "id": "8e0547bd-8869-44bf-8a42-6b70f11e0b63",
+            "actions": [
+                {
+                    "name": "AvancerReculer",
+                    "type": "Value",
+                    "id": "3ee59d92-0719-489e-ab9c-c6aff2964313",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MonterDescendre",
+                    "type": "Value",
+                    "id": "7142889c-ecc0-45a2-916a-38c789a5135b",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Accelerer",
+                    "type": "Button",
+                    "id": "446d3fe0-62e2-4353-b199-fbafbe0da33a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "ad4bcbdc-7c13-400b-b142-2c8d451fad56",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AvancerReculer",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Positive",
+                    "id": "15ea40b3-604a-4089-abad-5c7885b221aa",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Clavier",
+                    "action": "AvancerReculer",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Negative",
+                    "id": "fc7870a4-6a38-45da-815b-5f1e9625e4f4",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Clavier",
+                    "action": "AvancerReculer",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "7e7df7b5-51ec-476e-8a66-b681780f83e4",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MonterDescendre",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "3bb8cc0a-bca6-43e2-89f1-f71cd79c1577",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Clavier",
+                    "action": "MonterDescendre",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "negative",
+                    "id": "07fa190b-6b43-4eb7-b980-c012fc4f2ef7",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Clavier",
+                    "action": "MonterDescendre",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "15052f55-419c-4c70-87fe-1edd1e4da79e",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Clavier",
+                    "action": "Accelerer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Clavier",
+            "bindingGroup": "Clavier",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
