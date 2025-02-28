@@ -69,9 +69,12 @@ public class DeplacerSousMarin : MonoBehaviour
             
             Vector2 hautBas = new Vector2(0f, _rb.velocity.y);
             Vector2 avantArriere = new Vector2(_rb.velocity.z, 0f);
+
+            float directionZ = (_rb.velocity.z != 0) ? Mathf.Sign(_rb.velocity.z) : _animator.GetFloat("VitesseAA");
+            float directionY = (_rb.velocity.y != 0) ? Mathf.Sign(_rb.velocity.y) : _animator.GetFloat("VitesseHB");
             
-            _animator.SetFloat("VitesseAA", avantArriere.magnitude * _modifierAnimTranslation);
-            _animator.SetFloat("VitesseHB", hautBas.magnitude * _modifierAnimTranslation);
+            _animator.SetFloat("VitesseAA", avantArriere.magnitude * directionZ);
+            _animator.SetFloat("VitesseHB", hautBas.magnitude *  directionY);
            
             _animator.SetFloat("MouvementAA", avantArriere.magnitude);
             _animator.SetFloat("MouvementHB", hautBas.magnitude);
